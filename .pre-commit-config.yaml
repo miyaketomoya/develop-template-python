@@ -1,0 +1,14 @@
+repos:
+# Ruff
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.11.2 # pyproject.tomlのruffのバージョンに合わせる
+  hooks:
+    # ruffでのチェックと自動修正
+    - id: ruff
+      args: [ --fix ]
+    - id: ruff-format
+
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.15.0  # pyproject.tomlのruffのバージョンに合わせる
+    hooks:
+    -   id: mypy

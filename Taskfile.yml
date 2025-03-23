@@ -1,0 +1,35 @@
+# https://taskfile.dev
+
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task --list
+
+  all:
+    desc: すべてのCIに関するタスクを実行
+    cmds:
+      - task format
+      - task lint-fix
+      - task test
+  
+  format:
+    desc: コードをフォーマット
+    cmds:
+      - uv run ruff format src tests
+  
+  lint-check:
+    desc: コードをリントチェック
+    cmds:
+      - uv run ruff check src tests
+  
+  lint-fix:
+    desc: リントの問題を修正
+    cmds:
+      - uv run ruff check src tests --fix
+    
+  test:
+    desc: テストを実行
+    cmds:
+      - uv run pytest tests

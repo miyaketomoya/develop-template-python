@@ -1,0 +1,20 @@
+{
+    // 参考 https://qiita.com/IKEH/items/f907ff139483718ffcd4
+    // mypyの設定
+    "mypy-type-checker.args": [
+        "--config=pyproject.toml"
+    ],
+
+    // Ruffの設定
+    // refs: https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff
+    "[python]": {
+        // 保存時にコードを整理
+        "editor.formatOnSave": true,
+        // デフォルトのformatterにruffを指定
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            // 保存時にimportを整理
+            "source.organizeImports": "explicit"
+        }
+    },
+}
