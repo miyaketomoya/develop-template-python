@@ -35,7 +35,7 @@ uv --version
 ```
 # uv.lockがあるディレクトリで以下を実行
 uv sync
-> (champion-crm) tomoyamiyake@tomoyamiyakenoMacBook-Air-2 champion-crm % こんな感じのchampion-crm環境が立ち上がる
+> (champion-crm) champion-crm % こんな感じのchampion-crm環境が立ち上がる
 
 # もしdev環境がいらないときは
 uv sync --no-dev
